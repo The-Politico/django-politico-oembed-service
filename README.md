@@ -27,15 +27,17 @@
   ```
 
 
-### Using services
+### Services
 
 ##### Twitter
 
+`oembed/twitter/`
+
 ```javascript
-fetch('./your/api/endpoint/oembed/twitter/', {
+fetch('https://your/api/oembed/twitter/', {
   method: 'POST',
   headers: {
-    Authorization: `Token ${YOUR_APP_TOKEN_HERE}`,
+    Authorization: `Token ${YOUR_TOKEN}`, // or whatever auth strategy you use
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
