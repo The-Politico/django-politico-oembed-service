@@ -2,9 +2,7 @@ from importlib import import_module
 
 
 def import_class(val):
-    """
-    Import a class from a string module path.
-
+    """Attempt to import a class from a string representation.
     Pattern borrowed from Django REST Framework.
     See rest_framework/settings.py#L170-L182
     """

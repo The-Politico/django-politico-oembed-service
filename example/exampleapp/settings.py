@@ -19,7 +19,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'oembeder',
+    'tokenservice',
+    'oembedservice',
 ]
 
 MIDDLEWARE = [
@@ -93,12 +94,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #########################
-# oembeder settings
+# oembedservice settings
 
-OEMBEDER_SECRET_KEY = ''
-OEMBEDER_AWS_ACCESS_KEY_ID = ''
-OEMBEDER_AWS_SECRET_ACCESS_KEY = ''
-OEMBEDER_AWS_REGION = ''
-OEMBEDER_AWS_S3_BUCKET = ''
-OEMBEDER_CLOUDFRONT_ALTERNATE_DOMAIN = ''
-OEMBEDER_S3_UPLOAD_ROOT = ''
+OEMBEDSERVICE_API_AUTHENTICATION_CLASS = (
+    'tokenservice.authentication.TokenAuthentication'
+)
+# OEMBEDSERVICE_API_PERMISSION_CLASS = ''

@@ -22,56 +22,28 @@
   #########################
   # oembeder settings
 
-  OEMBEDER_SECRET_KEY = ''
-  OEMBEDER_AWS_ACCESS_KEY_ID = ''
-  OEMBEDER_AWS_SECRET_ACCESS_KEY = ''
-  OEMBEDER_AWS_REGION = ''
-  OEMBEDER_AWS_S3_BUCKET = ''
-  OEMBEDER_CLOUDFRONT_ALTERNATE_DOMAIN = ''
-  OEMBEDER_S3_UPLOAD_ROOT = ''
+  OEMBEDSERVICE_API_AUTHENTICATION_CLASS = ''
+  OEMBEDSERVICE_API_PERMISSION_CLASS = ''
   ```
 
-### Developing
 
-##### Running a development server
+### Using services
 
-Developing python files? Move into example directory and run the development server with pipenv.
+##### Twitter
 
-  ```
-  $ cd example
-  $ pipenv run python manage.py runserver
-  ```
-
-Developing static assets? Move into the pluggable app's staticapp directory and start the node development server, which will automatically proxy Django's development server.
-
-  ```
-  $ cd oembeder/staticapp
-  $ gulp
-  ```
-
-Want to not worry about it? Use the shortcut make command.
-
-  ```
-  $ make dev
-  ```
-
-##### Setting up a PostgreSQL database
-
-1. Run the make command to setup a fresh database.
-
-  ```
-  $ make database
-  ```
-
-2. Add a connection URL to the `.env` file.
-
-  ```
-  DATABASE_URL="postgres://localhost:5432/oembeder"
-  ```
-
-3. Run migrations from the example app.
-
-  ```
-  $ cd example
-  $ pipenv run python manage.py migrate
-  ```
+```javascript
+fetch('./your/api/endpoint/oembed/twitter', {
+  method: 'POST',
+  headers: {
+    Authorization: `Token ${YOUR_APP_TOKEN_HERE}`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    url: 'https://twitter.com/someuser/sometweeturl/'
+  })
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+});
+```

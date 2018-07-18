@@ -24,7 +24,9 @@ setup(
     keywords='',
     packages=find_packages(exclude=['docs', 'tests', 'example']),
     include_package_data=True,
-    install_requires=[],
+    install_requires=[
+        'djangorestframework',
+    ],
     extras_require={
         'test': ['pytest'],
     },

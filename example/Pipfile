@@ -4,9 +4,11 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [requires]
 
 python_version = "3.6"
+
 
 [packages]
 
@@ -14,9 +16,12 @@ pytest = "*"
 "flake8" = "*"
 django = ">=2.0"
 djangorestframework = "*"
-"dj-database-url" = "*"
+dj-database-url = "*"
 "psycopg2" = "*"
-"oembeder" = {path = "./..", editable = true}
+oembedservice = {path = "./..", editable = true}
+django-politico-token-service = "==0.0.2"
+requests = "*"
 
 
 [dev-packages]
+
