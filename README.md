@@ -32,7 +32,7 @@
 ##### Twitter
 
 ```javascript
-fetch('./your/api/endpoint/oembed/twitter', {
+fetch('./your/api/endpoint/oembed/twitter/', {
   method: 'POST',
   headers: {
     Authorization: `Token ${YOUR_APP_TOKEN_HERE}`,
