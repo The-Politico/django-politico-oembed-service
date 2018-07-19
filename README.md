@@ -81,3 +81,11 @@ fetch('https://your-api.com/youtube/', {
   console.log(data);
 });
 ```
+
+### Developing
+
+##### Testing
+
+```
+$ python example/manage.py test
+```
