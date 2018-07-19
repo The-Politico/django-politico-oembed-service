@@ -1,16 +1,17 @@
 import requests
-
-from oembedservice.conf import settings
-from oembedservice.utils.validators import check_domain
 from rest_framework.exceptions import NotFound, ParseError
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from oembedservice.conf import settings
+from oembedservice.utils.validators import check_domain
 
 
 def truthy(value):
     """
     Checks for twitter's valid "truthy" values.
     """
+    value = value.lower()
     if value == 't' or value == 'true' or value == '1':
         return True
     return False
@@ -26,6 +27,7 @@ class TwitterOembedView(APIView):
             raise ParseError('No url')
         if not check_domain(url, domain="twitter.com"):
             raise ParseError('Invalid url')
+        print(request.data)
         maxwidth = int(request.data.get('maxwidth', 550))
         hide_media = truthy(request.data.get('hide_media', 'f'))
         hide_thread = truthy(request.data.get('hide_thread', 'f'))

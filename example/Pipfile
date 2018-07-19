@@ -21,6 +21,7 @@ dj-database-url = "*"
 oembedservice = {path = "./..", editable = true}
 django-politico-token-service = "==0.0.2"
 requests = "*"
+crayons = "*"
 
 
 [dev-packages]
