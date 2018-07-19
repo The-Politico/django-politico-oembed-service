@@ -1,7 +1,8 @@
 from django.urls import path
 
-from .views import TwitterOembedView
+from .views import TwitterOembedView, YouTubeOembedView
 
 urlpatterns = [
-    path('oembed/twitter/', TwitterOembedView.as_view()),
+    path('twitter/', TwitterOembedView.as_view()),
+    path('youtube/', YouTubeOembedView.as_view()),
 ]
