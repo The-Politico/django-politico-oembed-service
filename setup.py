@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='django-politico-oembed-service',
-    version='0.0.3',
+    version='0.0.4',
     description='',
     url='https://github.com/The-Politico/django-politico-oembed-service',
     author='POLITICO interactive news',

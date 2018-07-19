@@ -3,6 +3,7 @@ Use this file to configure pluggable app settings and resolve defaults
 with any overrides set in project settings.
 """
 from django.conf import settings as project_settings
+
 from oembedservice.utils.importers import import_class
 
 
