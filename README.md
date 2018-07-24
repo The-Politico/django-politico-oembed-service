@@ -16,7 +16,7 @@
   INSTALLED_APPS = [
       # ...
       'rest_framework',
-      'oembeder',
+      'oembedservice',
   ]
 
   #########################
